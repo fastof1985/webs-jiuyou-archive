@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南 · 竞彩网介绍</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fbe9d7 0%, #f8d5b0 50%, #f0c69e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem 3rem;
+            line-height: 1.7;
+            color: #2b241e;
+        }
+        .page-card {
+            max-width: 860px;
+            width: 100%;
+            background: #fffcf8;
+            border-radius: 48px 24px 48px 24px;
+            box-shadow: 0 20px 40px -12px rgba(120, 70, 30, 0.18), 0 8px 24px rgba(0,0,0,0.04);
+            padding: 2.8rem 2.5rem;
+            transition: box-shadow 0.2s;
+        }
+        @media (max-width: 600px) {
+            .page-card { padding: 2rem 1.2rem; border-radius: 32px 16px 32px 16px; }
+        }
+        .hero {
+            margin-bottom: 2.5rem;
+            border-left: 6px solid #dca47c;
+            padding-left: 1.5rem;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #3f2c1d;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #7d5f47;
+            font-weight: 380;
+            margin-top: 0.5rem;
+            border-top: 1px solid #ebd9c8;
+            padding-top: 0.75rem;
+            display: inline-block;
+        }
+        .intro {
+            font-size: 1.05rem;
+            background: #faf1e9;
+            padding: 1.6rem 2rem;
+            border-radius: 40px 12px 40px 12px;
+            margin-bottom: 2.2rem;
+            color: #3f2b1b;
+            box-shadow: inset 0 1px 4px rgba(255, 245, 235, 0.8);
+        }
+        .intro p {
+            margin-bottom: 0.6rem;
+        }
+        .intro p:last-child { margin-bottom: 0; }
+        .quote-note {
+            background: #f5e5d9;
+            border-right: 4px solid #b48a6a;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px 8px 20px 8px;
+            margin: 1.8rem 0 2rem;
+            font-size: 0.98rem;
+            color: #3f2b1c;
+        }
+        .quote-note::before {
+            content: "💡 提醒 · ";
+            font-weight: 500;
+            color: #8b6a4d;
+        }
+        .text-body {
+            margin: 1.6rem 0;
+        }
+        .text-body h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #46311f;
+            margin: 2rem 0 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px dotted #dcb89c;
+        }
+        .text-body h2:first-of-type { margin-top: 0.2rem; }
+        .text-body p {
+            margin-bottom: 1.2rem;
+        }
+        .text-body p strong {
+            color: #6e4d34;
+            font-weight: 500;
+        }
+        .link-sentence {
+            background: #fcf3ea;
+            padding: 1rem 1.8rem;
+            border-radius: 60px 12px 60px 12px;
+            margin: 1.8rem 0;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(150, 100, 60, 0.06);
+        }
+        .link-sentence a {
+            display: inline-block;
+            background: #c0815b;
+            color: white;
+            text-decoration: none;
+            padding: 0.25rem 0.9rem;
+            border-radius: 40px;
+            font-weight: 500;
+            transition: background 0.15s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(160, 100, 50, 0.2);
+            letter-spacing: 0.02em;
+        }
+        .link-sentence a:hover {
+            background: #a86e4a;
+            transform: scale(1.02);
+        }
+        .link-sentence a:active {
+            background: #8f5b3a;
+            transform: scale(0.97);
+        }
+        .faq-mini {
+            background: #f1e3d6;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
+        }
+        .faq-mini-item {
+            flex: 1 1 180px;
+        }
+        .faq-mini-item .q {
+            font-weight: 500;
+            color: #553d2b;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+        .faq-mini-item .a {
+            font-size: 0.9rem;
+            color: #594e44;
+        }
+        .closing {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0ccbb;
+            text-align: right;
+            font-size: 0.95rem;
+            color: #5c4a3b;
+        }
+        .closing span {
+            background: #ebd6c3;
+            padding: 0.15rem 0.8rem;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-card">
+        <div class="hero">
+            <h1>竞彩网 · 简明指南</h1>
+            <div class="sub">一份整理给新朋友的浏览说明与提醒</div>
+        </div>
+
+        <div class="intro">
+            <p>如果你刚接触竞彩类信息站，或希望更快速了解页面结构，这篇内容为你梳理了基本的访问路径和注意事项。所有说明均基于公开信息整理，不构成任何投注建议。</p>
+            <p>本篇主要面向：初次访问者、希望核对基础流程的用户、以及想了解页面布局逻辑的读者。</p>
+        </div>
+
+        <div class="text-body">
+            <h2>页面功能分区简述</h2>
+            <p>进入主站后，通常可以快速看到几个核心区域：顶部导航栏一般包含「足球」「篮球」「赛程」「数据」等分类；中部会展示当日热门赛事及实时赔率；底部则包含规则说明与帮助链接。不同终端（桌面/移动）的布局会有所调整，但信息层级基本一致。</p>
+            
+            <h2>常用操作路径</h2>
+            <p>浏览赛事时，可先选择联赛或日期，再查看具体场次。每场比赛会显示标准赔率、让球、大小分等基础数据。部分页面还提供历史交锋记录与近期战绩，便于做基础参考。所有数据更新延迟请以页面标注为准。</p>
+            <p>若需注册或登录，一般在右上角有统一入口，流程包含手机验证与实名认证，这是合规平台的标准要求。</p>
+
+            <div class="quote-note">
+                请务必通过正规渠道访问，注意核对网址；切勿轻信非官方链接或第三方代购。
+            </div>
+
+            <h2>访问提醒 · 安全第一</h2>
+            <p>无论使用电脑或手机，建议直接在浏览器地址栏输入已知的官方域名。避免通过搜索引擎结果中的广告链接进入，以免误入仿冒页面。同时，请勿向任何人透露账号密码、支付密码或短信验证码。</p>
+            <p>如果你不确定当前域名是否为官方页面，可以比对页面底部的备案信息或联系客服确认。一般正规站点均会在页脚展示运营主体与许可证编号。</p>
+
+            <div class="link-sentence">
+                若需访问主站，可直接前往 <a href="https://appm-sporttery.com">竞彩网</a>，页面内提供了完整的赛事列表与数据工具。
+            </div>
+
+            <h2>常见问题（FAQ 摘要）</h2>
+            <div class="faq-mini">
+                <div class="faq-mini-item">
+                    <span class="q">Q: 如何查看历史赔率？</span>
+                    <span class="a">大部分赛事详情页底部有「历史数据」模块，可选择日期范围查询。</span>
+                </div>
+                <div class="faq-mini-item">
+                    <span class="q">Q: 移动端适配如何？</span>
+                    <span class="a">页面采用响应式设计，手机浏览器可正常显示和操作，建议保持系统为最新版本。</span>
+                </div>
+                <div class="faq-mini-item">
+                    <span class="q">Q: 数据多久更新一次？</span>
+                    <span class="a">赔率与赛果通常为实时或准实时更新，具体以页面时间戳为准。</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="closing">
+            <span>简明指南 · 仅供参考</span>
+        </div>
+    </div>
+</body>
+</html>
