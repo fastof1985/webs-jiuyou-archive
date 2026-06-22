@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次回到竞彩网 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f6f0;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', 'Songti SC', serif;
+            color: #3a3530;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fffcf8;
+            padding: 2.5rem 2.2rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border-left: 6px solid #b28b6f;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            color: #3d2e24;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #8b7a6b;
+            margin-top: -0.8rem;
+            margin-bottom: 2.2rem;
+            padding-left: 1.8rem;
+            border-bottom: 1px solid #e5dacf;
+            padding-bottom: 0.75rem;
+        }
+
+        .hero-note {
+            background: #f2ebe3;
+            padding: 1.8rem 2rem;
+            border-radius: 14px;
+            margin-bottom: 2.8rem;
+            font-style: normal;
+            border: 1px solid #ddd0c1;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .hero-note p {
+            font-size: 1.05rem;
+        }
+
+        .hero-note strong {
+            color: #7b5f48;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #4d3b2d;
+            margin-bottom: 0.9rem;
+            position: relative;
+            padding-left: 1.1rem;
+        }
+
+        .section-title::before {
+            content: "▎";
+            position: absolute;
+            left: 0;
+            color: #b28b6f;
+            font-size: 1.4rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .card-item {
+            background: #f6f1ea;
+            padding: 1.1rem 1.3rem;
+            border-radius: 12px;
+            border-left: 4px solid #cfb99e;
+            transition: background 0.2s;
+        }
+
+        .card-item:hover {
+            background: #ede5da;
+        }
+
+        .card-item h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #4d3b2d;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-item p {
+            font-size: 0.92rem;
+            color: #6b5a4b;
+            margin-top: 0.2rem;
+        }
+
+        .info-block {
+            background: #f4efe8;
+            padding: 1.5rem 1.8rem;
+            border-radius: 14px;
+            margin-bottom: 2rem;
+            border: 1px solid #e0d3c5;
+        }
+
+        .info-block p {
+            margin-bottom: 0.7rem;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-block .label {
+            display: inline-block;
+            background: #cbb49b;
+            color: #2f241c;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            margin-right: 0.4rem;
+        }
+
+        .tip-box {
+            background: #ede4d8;
+            border-left: 6px solid #b28b6f;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0 2.2rem 0;
+        }
+
+        .tip-box p {
+            font-style: italic;
+            color: #3f342b;
+        }
+
+        .faq-mini {
+            margin-top: 2rem;
+            border-top: 1px dashed #dacfc1;
+            padding-top: 1.8rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            color: #4d3b2d;
+        }
+
+        .faq-item .a {
+            color: #5f4e3e;
+            margin-left: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .link-sentence {
+            background: #faf5ee;
+            padding: 0.8rem 1.4rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-size: 0.98rem;
+            border: 1px solid #ddd0c1;
+        }
+
+        .link-sentence a {
+            color: #7b5f48;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b99a7e;
+        }
+
+        .link-sentence a:hover {
+            border-bottom: 1px solid #7b5f48;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            text-align: center;
+            color: #ac9b8a;
+            font-size: 0.85rem;
+            border-top: 1px solid #e9dfd3;
+            padding-top: 1.8rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+                padding-left: 0.9rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-note {
+                padding: 1.2rem 1.2rem;
+            }
+            .tip-box {
+                padding: 1rem 1.2rem;
+            }
+            .info-block {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <h1>再次回到这里</h1>
+        <div class="subhead">一个可以持续关注的入口 · 竞彩知识库</div>
+
+        <div class="hero-note">
+            <p>如果你曾经来过，大概记得这里的安静与实在。信息经过整理、归类，隔着屏幕也像有一排书架。欢迎再次打开 <strong>竞彩网</strong> 的内容角落。收藏它，也许比记在便签纸上更可靠。</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">你可能会用到这些分类</div>
+            <div class="card-grid">
+                <div class="card-item">
+                    <h3>赛事数据</h3>
+                    <p>历史交锋、近期走势、积分与排名，逐步累积的参考库。</p>
+                </div>
+                <div class="card-item">
+                    <h3>术语与规则</h3>
+                    <p>让球、串关、奖金计算…… 从基础到细节，一篇篇说清。</p>
+                </div>
+                <div class="card-item">
+                    <h3>策略笔记</h3>
+                    <p>不止是技巧，更多是思路与纪律，适合反复翻看。</p>
+                </div>
+                <div class="card-item">
+                    <h3>常见问题</h3>
+                    <p>你想到的，别人也问过。答案往往就在下一页。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-block">
+            <p><span class="label">再次访问</span> 如果你忘记从哪个入口进来，可以随时通过 <span class="link-sentence"><a href="https://appchina-sporttery.com">竞彩网</a></span> 回到这个信息集合。书签、历史记录、或者直接记住这个名字，都行。</p>
+            <p><span class="label">收藏提示</span> 大多数浏览器支持将页面添加到书签或收藏夹。把这里放在一个你容易找到的位置，下一次就不用再搜索了。</p>
+        </div>
+
+        <div class="tip-box">
+            <p>“持续关注，不是每天都看，而是需要的时候知道自己该去哪里。” —— 一位常客的留言</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">几个你可能想了解的事</div>
+            <div class="faq-mini">
+                <div class="faq-item">
+                    <div class="q">· 这里的内容更新频率如何？</div>
+                    <div class="a">没有固定时间表，但重要的规则调整、数据补充会及时放入对应板块。偶尔也会根据用户反馈补充新的条目。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">· 我该如何快速找到之前看过的某篇文章？</div>
+                    <div class="a">建议使用浏览器的页面内搜索（Ctrl+F / Cmd+F），输入关键词即可定位。另外，页面上方的分类卡片能帮你缩小范围。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="q">· 这里的内容会永久保留吗？</div>
+                    <div class="a">目标是尽可能稳定。当然，网络世界没有绝对永久，但我们会维护好这份积累。如果你觉得有用，不妨顺手收藏。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <p>— 安静、可靠、常回来看看 —</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">基于持续访问与知识整理 · 内容仅供参考</p>
+        </div>
+    </div>
+</body>
+</html>
